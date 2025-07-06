@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JourneyScape - Your Next Adventure Awaits</title>
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Font Awesome CDN for icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <!-- Google Fonts: Inter and Poppins -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="font-poppins bg-neutral-50 text-gray-800 bg-white">
+        <!-- Header Section -->
+        <header
+            id="main-header"
+            class="fixed w-full top-0 left-0 z-50 p-4 transition-all duration-300 ease-in-out bg-[rgba(0,0,0,.65)]"
+        >
+            <nav class="container mx-auto flex justify-between items-center">
+                <a
+                    href="#"
+                    class="text-white text-3xl font-extrabold tracking-tight rounded-lg p-2 transition duration-300"
+                >
+                    Journey<span class="text-gray-400">Scape</span>
+                </a>
+
+                <!-- Hamburger menu for mobile -->
+                <button
+                    id="mobile-menu-button"
+                    class="lg:hidden text-white focus:outline-none"
+                >
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Navigation Links -->
+                <ul
+                    id="navigation-menu"
+                    class="hidden lg:flex space-x-8 text-lg font-medium"
+                >
+                    <li>
+                        <a
+                            href="#home"
+                            class="text-white hover:text-blue-300 transition duration-300 flex items-center"
+                            >Home</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#about"
+                            class="text-white hover:text-blue-300 transition duration-300 flex items-center"
+                            >About</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#destinations"
+                            class="text-white hover:text-blue-300 transition duration-300 flex items-center"
+                            >Destinations</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#gallery"
+                            class="text-white hover:text-blue-300 transition duration-300 flex items-center"
+                            >Gallery</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#testimonials"
+                            class="text-white hover:text-blue-300 transition duration-300 flex items-center"
+                            >Testimonials</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#contact"
+                            class="text-white hover:text-blue-300 transition duration-300 flex items-center"
+                            >Contact</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Navigation Menu (hidden by default) -->
+            <div
+                id="mobile-menu"
+                class="hidden lg:hidden bg-white mt-4 rounded-lg shadow-lg"
+            >
+                <ul
+                    class="flex flex-col items-center py-4 space-y-4 text-lg font-medium"
+                >
+                    <li>
+                        <a
+                            href="#home"
+                            class="text-gray-700 hover:text-indigo-600 transition duration-300 flex items-center"
+                            >Home</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#about"
+                            class="text-gray-700 hover:text-indigo-600 transition duration-300 flex items-center"
+                            >About</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#destinations"
+                            class="text-gray-700 hover:text-indigo-600 transition duration-300 flex items-center"
+                            >Destinations</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#gallery"
+                            class="text-gray-700 hover:text-indigo-600 transition duration-300 flex items-center"
+                            >Gallery</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#testimonials"
+                            class="text-gray-700 hover:text-indigo-600 transition duration-300 flex items-center"
+                            >Testimonials</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#contact"
+                            class="text-gray-700 hover:text-indigo-600 transition duration-300 flex items-center"
+                            >Contact</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="">
+            <!-- Hero Section -->
+            <hero
+                id="home"
+                class="relative bg-cover bg-center h-[100vh] w-[100vw] flex items-end justify-between text-white p-20"
+                style="background-image: url('./assets/header-bg-image.jpg')"
+            >
+                <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
+                <div class="relative z-10 text-left w-[70%]">
+                    <h1
+                        class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight drop-shadow-lg"
+                    >
+                        Pack your bags, let's go somewhere amazing
+                    </h1>
+                    <p
+                        class="text-lg md:text-xl mt-2 font-light max-w-2xl drop-shadow-md"
+                    >
+                        Explore hidden gems, breathtaking views, and
+                        unforgettable adventures tailored just for you.
+                    </p>
+                </div>
+                <a
+                    href="#destinations"
+                    class="bg-white text-black text-xl font-bold py-3.5 px-8 rounded-lg capitalize tracking-wide shadow-md transition-all duration-300 ease-in-out hover:bg-gray-200 hover:-translate-y-0.5 hover:shadow-lg inline-block z-20"
+                >
+                    Book Now <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </hero>
+
+            <!-- About Section: "What's so special about this?" -->
+            <section id="about" class="w-full mx-auto py-8 px-20">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">
+                    What's so special about this?
+                </h2>
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+                >
+                    <div class="space-y-8">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Beyond mere trip planning, we craft immersive
+                            journeys. Our expertise lies in curating unique
+                            experiences that connect you with the heart of each
+                            destination.
+                        </p>
+                        <a
+                            href="#"
+                            class="bg-black text-white font-semibold py-3.5 px-8 rounded-lg capitalize tracking-wide shadow-md transition-all duration-300 ease-in-out hover:bg-gray-800 hover:-translate-y-0.5 hover:shadow-lg inline-block"
+                        >
+                            Learn More <i class="fas fa-chevron-right ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div class="flex flex-col items-start">
+                            <span
+                                class="text-5xl font-extrabold text-blue-500 mb-4"
+                                >01</span
+                            >
+                            <figure
+                                class="rounded-xl overflow-hidden shadow-md mb-4 w-full h-40"
+                            >
+                                <img
+                                    src="https://c8.alamy.com/comp/2RHG49P/create-itinerary-isolated-cartoon-vector-illustrations-travel-planner-researching-destination-for-trip-using-map-travel-service-recreation-industry-hospitality-business-vector-cartoon-2RHG49P.jpg"
+                                    alt="Tailored Trips"
+                                    class="object-center"
+                                />
+                            </figure>
+                            <h3
+                                class="text-xl font-semibold mb-2 text-gray-900"
+                            >
+                                Personalized Itineraries
+                            </h3>
+                            <p class="text-gray-600">
+                                We don't just plan vacations; we create journeys
+                                tailored to your dreams, ensuring every moment
+                                is unforgettable.
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <span
+                                class="text-5xl font-extrabold text-blue-500 mb-4"
+                                >02</span
+                            >
+                            <figure
+                                class="rounded-xl overflow-hidden shadow-md mb-4 w-full h-40"
+                            >
+                                <img
+                                    src="https://img.freepik.com/premium-vector/vector-illustration-young-people-having-great-time-positive-emotions-concept-group-characters-enjoying-themselves-celebrating_163983-2140.jpg"
+                                    alt="Local Partners"
+                                    class="object-center"
+                                />
+                            </figure>
+                            <h3
+                                class="text-xl font-semibold mb-2 text-gray-900"
+                            >
+                                Authentic Experiences
+                            </h3>
+                            <p class="text-gray-600">
+                                With our trusted local partners, you'll discover
+                                hidden spots and cultural experiences that most
+                                travelers never get to see.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video Section -->
+
+            <section
+                id="video-promo"
+                class="mx-auto my-10 relative overflow-hidden rounded-2xl shadow-xl mx-auto max-w-5xl"
+            >
+                <video controls class="w-full h-full object-cover" autoplay>
+                    <!-- Placeholder video source - replace with your actual video -->
+                    <source
+                        src="https://video-previews.elements.envatousercontent.com/h264-video-previews/18e20497-1649-4361-9498-aaad11e836c5/51157855.mp4"
+                        type="video/mp4"
+                    />
+                    <!-- Placeholder VTT file for subtitles -->
+                    <track
+                        kind="subtitles"
+                        src="./assets/placeholder_subtitles.vtt"
+                        srclang="en"
+                        label="English"
+                    />
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+            <!-- <p class="text-center text-gray-600 mt-8 text-lg">
+                Get a glimpse of the incredible experiences that await you.
+            </p> -->
+
+            <!-- Audio Section -->
+            <section
+                id="audio-background"
+                class="mx-auto mt-10 mb-5 p-8 text-center"
+            >
+                <h2 class="text-2xl font-bold mb-4 text-gray-900">
+                    Set the Mood: Travel Soundtrack
+                </h2>
+                <audio
+                    controls
+                    loop
+                    class="mx-auto w-full max-w-xl rounded-full shadow-md"
+                >
+                    <!-- Placeholder audio source - replace with your actual audio -->
+                    <source
+                        src="./assets/music.mp3"
+                        type="audio/mpeg"
+                    />
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-600 mt-4 text-lg">
+                    Enjoy some relaxing instrumental music as you plan your next
+                    escape.
+                </p>
+            </section>
+
+            <!-- Destinations Section (API Data will be loaded here) -->
+            <section id="destinations" class="p-20 bg-white">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">
+                    Your next favorite place awaits
+                </h2>
+                <div
+                    id="api-data-container"
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                >
+                    <!-- API fetched content will be inserted here -->
+                    <p class="col-span-full text-center text-gray-500 text-xl">
+                        <i class="fas fa-spinner fa-spin mr-2"></i>Loading
+                        incredible destinations...
+                    </p>
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section id="gallery" class="p-20 bg-gray-50 w-full">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">
+                    Moments from Our Journeys
+                </h2>
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+                >
+                    <figure
+                        class="rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
+                    >
+                        <img
+                            src="https://thumbs.dreamstime.com/b/group-people-hiking-mountains-group-climbers-backpacks-climbing-up-mountain-mountaineering-mount-group-people-362933020.jpg"
+                            alt="Mountain View"
+                            class="w-full h-48 object-cover"
+                        />
+                        <figcaption
+                            class="p-4 bg-white text-center text-lg font-semibold text-gray-700"
+                        >
+                            Majestic Mountains
+                        </figcaption>
+                    </figure>
+                    <figure
+                        class="rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
+                    >
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3GbYlezoqwXC-ml58gvavGWppvoxGs7NzWQ&s"
+                            alt="Coastal Escape"
+                            class="w-full h-48 object-cover"
+                        />
+                        <figcaption
+                            class="p-4 bg-white text-center text-lg font-semibold text-gray-700"
+                        >
+                            Coastal Escape
+                        </figcaption>
+                    </figure>
+                    <figure
+                        class="rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
+                    >
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkq8n4Lhi711CiYDnCKRaEM882zcAxtUTfFg&s"
+                            alt="Urban Exploration"
+                            class="w-full h-48 object-cover"
+                        />
+                        <figcaption
+                            class="p-4 bg-white text-center text-lg font-semibold text-gray-700"
+                        >
+                            Urban Exploration
+                        </figcaption>
+                    </figure>
+                    <figure
+                        class="rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
+                    >
+                        <img
+                            src="https://www.shutterstock.com/image-photo/happy-tourist-having-fun-enjoying-600nw-2488913735.jpg"
+                            alt="Desert Adventure"
+                            class="w-full h-48 object-cover"
+                        />
+                        <figcaption
+                            class="p-4 bg-white text-center text-lg font-semibold text-gray-700"
+                        >
+                            Desert Adventure
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section
+                id="testimonials"
+                class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8"
+            >
+                <div
+                    class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-indigo-100),white)] opacity-20"
+                ></div>
+                <div
+                    class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl ring-1 shadow-indigo-600/10 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"
+                ></div>
+                <div class="mx-auto max-w-2xl lg:max-w-4xl">
+                    <img
+                        class="mx-auto h-12"
+                        src="https://tailwindcss.com/plus-assets/img/logos/workcation-logo-indigo-600.svg"
+                        alt=""
+                    />
+                    <figure class="mt-10">
+                        <blockquote
+                            class="text-center text-xl/8 font-semibold text-gray-900 sm:text-2xl/9"
+                        >
+                            <p>
+                                “I've been on countless trips, but this one was
+                                different. Everything was perfectly organized,
+                                and the local insights made it truly unique.
+                                Can't wait for my next adventure!”
+                            </p>
+                        </blockquote>
+                        <figcaption class="mt-10">
+                            <img
+                                class="mx-auto size-10 rounded-full"
+                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                alt=""
+                            />
+                            <div
+                                class="mt-4 flex items-center justify-center space-x-3 text-base"
+                            >
+                                <div class="font-semibold text-gray-900">
+                                    Judith Black
+                                </div>
+                                <svg
+                                    viewBox="0 0 2 2"
+                                    width="3"
+                                    height="3"
+                                    aria-hidden="true"
+                                    class="fill-gray-900"
+                                >
+                                    <circle cx="1" cy="1" r="1" />
+                                </svg>
+                                <div class="text-gray-600">
+                                    Frequent Traveler
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section
+                id="contact"
+                class="container mx-auto my-20 p-8 bg-white rounded-2xl shadow-lg"
+            >
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">
+                    Ready for Your Adventure?
+                </h2>
+                <form class="max-w-2xl mx-auto space-y-6">
+                    <div>
+                        <label
+                            for="name"
+                            class="block text-lg font-medium mb-2 text-gray-700"
+                            >Name</label
+                        >
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-gray-500 text-gray-800"
+                            placeholder="Your Full Name"
+                        />
+                    </div>
+                    <div>
+                        <label
+                            for="email"
+                            class="block text-lg font-medium mb-2 text-gray-700"
+                            >Email</label
+                        >
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-gray-500 text-gray-800"
+                            placeholder="your@example.com"
+                        />
+                    </div>
+                    <div>
+                        <label
+                            for="message"
+                            class="block text-lg font-medium mb-2 text-gray-700"
+                            >Message</label
+                        >
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-gray-500 text-gray-800"
+                            placeholder="Tell us about your dream trip..."
+                        ></textarea>
+                    </div>
+                    <button
+                        type="submit"
+                        class="bg-black text-white font-semibold py-3.5 px-8 rounded-lg capitalize tracking-wide shadow-md transition-all duration-300 ease-in-out hover:bg-gray-800 hover:-translate-y-0.5 hover:shadow-lg w-full"
+                    >
+                        Send Inquiry <i class="fas fa-paper-plane ml-3"></i>
+                    </button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer
+            class="bg-gray-900 text-white p-10 text-center rounded-t-2xl shadow-inner"
+        >
+            <div class="container mx-auto">
+                <p class="text-lg mb-6">
+                    &copy; 2025 JourneyScape. All rights reserved.
+                </p>
+                <div class="flex justify-center items-center space-x-8 mb-6">
+                    <!-- Custom SVG for globe icon -->
+                    <svg
+                        class="w-10 h-10 text-blue-400"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2 0V4.07c3.95.49 7 3.85 7 7.93s-3.05 7.44-7 7.93z"
+                        />
+                    </svg>
+                    <p class="text-md text-gray-300">
+                        Connecting You to the World's Wonders.
+                    </p>
+                </div>
+                <div class="flex justify-center space-x-8 text-3xl">
+                    <a
+                        href="#"
+                        class="text-gray-400 hover:text-blue-400 transition duration-300"
+                        ><i class="fab fa-facebook"></i
+                    ></a>
+                    <a
+                        href="#"
+                        class="text-gray-400 hover:text-blue-400 transition duration-300"
+                        ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a
+                        href="#"
+                        class="text-gray-400 hover:text-blue-400 transition duration-300"
+                        ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a
+                        href="#"
+                        class="text-gray-400 hover:text-blue-400 transition duration-300"
+                        ><i class="fab fa-linkedin"></i
+                    ></a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Link to external JavaScript file -->
+        <script src="script.js" defer></script>
+    </body>
+</html>
