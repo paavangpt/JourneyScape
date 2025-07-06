@@ -34,17 +34,8 @@ async function fetchApiData() {
     apiDataContainer.innerHTML =
         '<p class="col-span-full text-center text-indigo-500 text-xl animate-pulse"><i class="fas fa-spinner fa-spin mr-2"></i>Loading incredible destinations...</p>';
 
-    const apiKey =
-        "4f3e6e915afc3a0216283783b47a4c3e9bbf5e8cb77f22884b0f0d57a76288d6";
-    const params = new URLSearchParams({
-        engine: "google",
-        q: "Italy Destinations",
-        api_key: apiKey,
-    });
-    const apiUrl = `https://serpapi.com/search.json?${params}`;
-
     try {
-        const response = await fetch(apiUrl);
+        const response = await fetch("https://my-json-server.typicode.com/paavangpt/travel-destinations/destinations/");
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -53,19 +44,7 @@ async function fetchApiData() {
         console.log("API Response:", data);
         apiDataContainer.innerHTML = "";
 
-        let itemsToDisplay = [];
-        if (
-            data &&
-            data.popular_destinations &&
-            Array.isArray(data.popular_destinations.destinations)
-        ) {
-            itemsToDisplay = data.popular_destinations.destinations;
-        } else {
-            console.warn("Unexpected API response structure:", data);
-            apiDataContainer.innerHTML =
-                '<p class="col-span-full text-center text-orange-500 text-xl"><i class="fas fa-exclamation-triangle mr-2"></i>API response structure is unexpected. Check console for details.</p>';
-            return;
-        }
+        let itemsToDisplay = data;
 
         if (itemsToDisplay.length > 0) {
             // Render fetched data (limiting to 6 for display consistency)
@@ -81,7 +60,7 @@ async function fetchApiData() {
                          alt="${item.title || "Destination"}" 
                          class="w-full h-48 object-cover ">
                          <div class="p-4">
-                    <h3 class="text-2xl font-semibold mb-3 text-indigo-800">${
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-800">${
                         item.title || "Unknown Destination"
                     }</h3>
                     <p class="text-gray-700 leading-relaxed">${
